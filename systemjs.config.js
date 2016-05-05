@@ -14,9 +14,10 @@
     'app':                        { main: 'main.browser.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { defaultExtension: 'js' },
-	'@angular2-material/core':   { main: 'core.js' },
+	'@angular2-material/core':    { main: 'core.js' },
 	'@angular2-material/input':   { main: 'input.js' },
-	'@angular2-material/toolbar':   { main: 'toolbar.js' },
+	'@angular2-material/toolbar': { main: 'toolbar.js' },
+	'@angular2-material/button':  { main: 'button.js' },
   };
 
   var packageNames = [

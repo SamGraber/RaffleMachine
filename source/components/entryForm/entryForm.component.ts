@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MdInput } from '@angular2-material/input';
+import { MdButton } from '@angular2-material/button';
 
 @Component({
 	moduleId: module.id,
 	selector: 'rmEntryForm',
 	templateUrl: 'entryForm.component.html',
-	directives: [MdInput],
+	directives: [MdInput, MdButton],
 })
-export class EntryFormComponent implements OnInit {
-	constructor() { }
+export class EntryFormComponent {
+	name: string;
 
-	ngOnInit() { }
-
+	add(): void {
+		console.log(this.name);
+	}
 }
