@@ -8,6 +8,7 @@ import { EntryListComponent } from './components/entryList/entryList.component';
 import { RaffleComponent } from './components/raffle/raffle.component';
 import { EntryService } from './services/entry/entry.service';
 import { AppStateService } from './services/appState/appState.service';
+import { RandomService } from './services/random/random.service';
 
 @Component({
 	moduleId: module.id,
@@ -15,7 +16,7 @@ import { AppStateService } from './services/appState/appState.service';
 	templateUrl: 'app.component.html',
 	directives: [MdToolbar, EntryFormComponent, EntryListComponent, RaffleComponent],
 	pipes: [AsyncPipe],
-	providers: [EntryService, AppStateService],
+	providers: [EntryService, AppStateService, RandomService],
 })
 export class AppComponent implements OnInit {
 	constructor(private appState: AppStateService) {}
