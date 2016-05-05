@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 
 import { EntryFormComponent } from './components/entryForm/entryForm.component';
 import { EntryListComponent } from './components/entryList/entryList.component';
+import { RaffleComponent } from './components/raffle/raffle.component';
 import { EntryService } from './services/entry/entry.service';
 import { AppStateService } from './services/appState/appState.service';
 
@@ -12,7 +13,7 @@ import { AppStateService } from './services/appState/appState.service';
 	moduleId: module.id,
 	selector: 'my-app',
 	templateUrl: 'app.component.html',
-	directives: [MdToolbar, EntryFormComponent, EntryListComponent],
+	directives: [MdToolbar, EntryFormComponent, EntryListComponent, RaffleComponent],
 	pipes: [AsyncPipe],
 	providers: [EntryService, AppStateService],
 })
@@ -23,6 +24,10 @@ export class AppComponent implements OnInit {
 	
 	showForm(): Observable<boolean> {
 		return this.appState.stateChanges.map(x => x.showForm);
+	}
+	
+	showRaffle(): Observable<boolean> {
+		return this.showForm().map(x => !x);
 	}
 	
 	toggle(): void {

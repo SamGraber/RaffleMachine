@@ -6,3 +6,6 @@
 	<rmEntryForm></rmEntryForm>
 	<button md-raised-button color="accent" (click)="toggle()">Begin raffle</button>
 </div>
+<div *ngIf="showRaffle() | async">
+	<rmRaffle></rmRaffle>
+</div>
