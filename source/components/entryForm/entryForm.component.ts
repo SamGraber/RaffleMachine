@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { MdInput } from '@angular2-material/input';
 import { MdButton } from '@angular2-material/button';
 
+import { EntryService } from '../../services/entry/entry.service';
+
 @Component({
 	moduleId: module.id,
 	selector: 'rmEntryForm',
@@ -10,8 +12,10 @@ import { MdButton } from '@angular2-material/button';
 })
 export class EntryFormComponent {
 	name: string;
+	
+	constructor(private entryService: EntryService) {}
 
 	add(): void {
-		console.log(this.name);
+		this.entryService.addEntry({ name: this.name });
 	}
 }
