@@ -1,4 +1,4 @@
-<md-list>
+<md-list *ngIf="notEmptyList() | async">
 	<md-subheader>Entries</md-subheader>
 	<md-list-item *ngFor="let entry of entryService.entryListChanges | async">
 		{{entry.name}}
