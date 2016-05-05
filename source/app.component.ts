@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
+import { MdToolbar } from '@angular2-material/toolbar';
+
+import { EntryFormComponent } from './components/entryForm/entryForm.component';
 
 @Component({
-  selector: 'my-app',
-  template: '<h1>My First Angular 2 App</h1>'
+	moduleId: module.id,
+	selector: 'my-app',
+	templateUrl: 'app.component.html',
+	directives: [MdToolbar, EntryFormComponent],
 })
-export class AppComponent { }
+export class AppComponent {}
