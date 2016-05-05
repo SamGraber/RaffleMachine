@@ -23,4 +23,8 @@ export class AppComponent implements OnInit {
 	showForm(): Observable<boolean> {
 		return this.appState.stateChanges.map(x => x.showForm);
 	}
+	
+	toggle(): void {
+		this.appState.toggleForm();
+	}
 }
