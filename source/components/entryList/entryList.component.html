@@ -2,5 +2,6 @@
 	<md-subheader>Entries</md-subheader>
 	<md-list-item *ngFor="let entry of entryService.entryListChanges | async">
 		{{entry.name}}
+		<button md-button align="right" (click)="remove(entry)">X</button>
 	</md-list-item>	
 </md-list>
