@@ -1,7 +1,8 @@
-<form (ngSubmit)="add()">
+<form #form="ngForm">
 	<md-input placeholder="Name"
 			  [(ngModel)]="name"
 			  ngControl="name"
+			  (keydown.enter)="add()"
 			  required></md-input>
-	<button md-button color="primary" type="submit">Add</button>
+	<button md-button color="primary" (click)="add()">Add</button>
 </form>
