@@ -4,6 +4,7 @@ import { MdToolbar } from '@angular2-material/toolbar';
 import { Observable } from 'rxjs';
 
 import { EntryFormComponent } from './components/entryForm/entryForm.component';
+import { EntryListComponent } from './components/entryList/entryList.component';
 import { EntryService } from './services/entry/entry.service';
 import { AppStateService } from './services/appState/appState.service';
 
@@ -11,7 +12,7 @@ import { AppStateService } from './services/appState/appState.service';
 	moduleId: module.id,
 	selector: 'my-app',
 	templateUrl: 'app.component.html',
-	directives: [MdToolbar, EntryFormComponent],
+	directives: [MdToolbar, EntryFormComponent, EntryListComponent],
 	pipes: [AsyncPipe],
 	providers: [EntryService, AppStateService],
 })

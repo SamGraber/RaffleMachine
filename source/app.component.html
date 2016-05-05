@@ -1,6 +1,7 @@
 <md-toolbar color="primary">
 	Raffle Machine	
 </md-toolbar>
+<rmEntryList></rmEntryList>
 <div *ngIf="showForm() | async">
 	<rmEntryForm></rmEntryForm>
 	<button md-raised-button color="accent" (click)="toggle()">Begin raffle</button>

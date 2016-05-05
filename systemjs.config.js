@@ -20,6 +20,7 @@
 	'@angular2-material/input':   { main: 'input.js' },
 	'@angular2-material/toolbar': { main: 'toolbar.js' },
 	'@angular2-material/button':  { main: 'button.js' },
+	'@angular2-material/list':    { main: 'list.js' },
   };
 
   var packageNames = [

@@ -1,0 +1,6 @@
+<md-list>
+	<md-subheader>Entries</md-subheader>
+	<md-list-item *ngFor="let entry of entryService.entryListChanges | async">
+		{{entry.name}}
+	</md-list-item>	
+</md-list>
