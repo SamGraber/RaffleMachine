@@ -4,15 +4,17 @@
   var map = {
     'app':                        'source', // 'dist',
     'rxjs':                       'node_modules/rxjs',
+    'lodash':                     'node_modules/lodash',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     '@angular':                   'node_modules/@angular',
-    '@angular2-material':                   'node_modules/@angular2-material',
+    '@angular2-material':         'node_modules/@angular2-material',
   };
 
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
     'app':                        { main: 'main.browser.js',  defaultExtension: 'js' },
-    'rxjs':                       { defaultExtension: 'js' },
+    'rxjs':                       { main: 'rx.js', defaultExtension: 'js' },
+    'lodash':                     { main: 'lodash.js', defaultExtension: 'js' },
     'angular2-in-memory-web-api': { defaultExtension: 'js' },
 	'@angular2-material/core':    { main: 'core.js' },
 	'@angular2-material/input':   { main: 'input.js' },
