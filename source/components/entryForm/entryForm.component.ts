@@ -21,6 +21,7 @@ export class EntryFormComponent {
 	add(): void {
 		if (this.form.valid) {
 			this.entryService.addEntry({ name: this.name });
+			this.name = '';
 		} else {
 			warning('You must enter a name');
 		}
