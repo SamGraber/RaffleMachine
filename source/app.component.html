@@ -7,5 +7,6 @@
 	<button md-raised-button color="accent" (click)="toggle()">Begin raffle</button>
 </div>
 <div *ngIf="showRaffle() | async">
+	<div><button md-button (click)="toggle()">Return to entry</button></div>
 	<rmRaffle></rmRaffle>
 </div>
